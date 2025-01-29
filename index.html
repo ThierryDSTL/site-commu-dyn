@@ -96,5 +96,18 @@
     </div>
   </div>
 </div>
+<script>
+  const firstName = document.getElementById("first-name");
+  const lastName = document.getElementById("last-name");
+  const message = document.getElementById("message");
+  const errorMessage = document.getElementById("error-message");
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (event) => {
+    if (firstName.value === "" || lastName.value === "" || message.value === "") {
+      errorMessage.style.display = "block";
+      event.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
